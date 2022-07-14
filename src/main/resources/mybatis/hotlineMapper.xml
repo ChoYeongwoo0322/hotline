@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Pack.mapper.HotlineMapper">
+   <select id="getAllHotlines" resultType="HotlineEntity">
+        SELECT * 
+        from Hotline
+        order by reg_date desc;
+    </select>
+    
+    <select id="selectByID" parameterType="String" resultType="HotlineEntity">
+        SELECT * 
+        from Hotline
+        where hotline_id=#{ID};
+    </select>
+    
+    <insert id="insert" parameterType="HotlineDTO">
+        INSERT
+        INTO Hotline 
+        VALUES ( 
+        	null,
+        	#{category},
+        	#{title},
+        	#{writer},
+        	#{writer_id},
+        	#{content},
+        	now(),
+        	null,
+        	null
+        );
+    </insert>
+    
+    <delete id="delete" parameterType="String">
+	    delete
+		from Hotline
+		where hotline_id=#{hotline_id};
+    </delete>
+    
+    <delete id="deletes" parameterType="List">
+    	<foreach collection="hotlineInfoList" item="hotlineInfo" index="index">
+		    delete
+			from Hotline
+			where hotline_id=#{hotlineInfo.hotline_id};
+		</foreach>
+    </delete>
+    
+    <update id="confirms" parameterType="HotlineList">
+    	<foreach collection="hotlineInfoList" item="hotlineInfo" index="index">
+	    	UPDATE Hotline 
+	    	SET confirm_date=now(), status= #{status}
+	    	WHERE hotline_id=#{hotlineInfo.hotline_id};
+    	</foreach>
+    </update>
+</mapper>

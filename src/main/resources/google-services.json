@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "910569392610",
+    "project_id": "poscoapp",
+    "storage_bucket": "poscoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910569392610:android:cf6400c182e6655c8391bb",
+        "android_client_info": {
+          "package_name": "com.barcodeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910569392610-kvcg2ob7c5roq7ju1qco649ebrc8nm2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKlEHAEmTrMBR44YN-JNH46DCSVvzlsvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910569392610-kvcg2ob7c5roq7ju1qco649ebrc8nm2e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910569392610:android:9ad15145c6cc07278391bb",
+        "android_client_info": {
+          "package_name": "com.company.poscoApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910569392610-kvcg2ob7c5roq7ju1qco649ebrc8nm2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKlEHAEmTrMBR44YN-JNH46DCSVvzlsvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910569392610-kvcg2ob7c5roq7ju1qco649ebrc8nm2e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

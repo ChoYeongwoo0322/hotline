@@ -35,4 +35,8 @@ public class HotlineService {
 		return hotlineMapper.confirms(hotlineList);
 	}
 
+	public List<HotlineEntity> getHotlineByWriterID(String writer_id) {
+		return hotlineMapper.selectByWriterID(writer_id);
+	}
+
 }

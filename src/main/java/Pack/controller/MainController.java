@@ -48,6 +48,12 @@ public class MainController {
 		return hotlineService.getHotlineByID(id);
 	}
 	
+	@GetMapping("/writerid/{writer_id}")
+	public List<HotlineEntity> getHotlineByWriterID(@PathVariable String writer_id) {
+		System.out.println("Select By id "+ writer_id);
+		return hotlineService.getHotlineByWriterID(writer_id);
+	}
+	
 	@PostMapping("/")
 	public Boolean insertHotline(@RequestBody HotlineDTO hotlineDTO) {
 		System.out.println("insert Hotline");

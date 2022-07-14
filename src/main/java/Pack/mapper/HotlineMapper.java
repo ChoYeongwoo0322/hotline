@@ -23,4 +23,6 @@ public interface HotlineMapper {
 	int deletes(HotlineList hotlineList);
 	
 	int confirms(HotlineList hotlineList);
+
+	List<HotlineEntity> selectByWriterID(String writer_id);
 }

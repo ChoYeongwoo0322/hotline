@@ -31,7 +31,8 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class PushNotificationService {
    
-    private static String firebaseSdkPath = "src/main/java/Pack/service/poscoapp-firebase-adminsdk-nvbh5-c024db5217.json";
+//    private static String firebaseSdkPath = "D:\\poscoapp-firebase-adminsdk-nvbh5-c024db5217.json";
+    private static String firebaseSdkPath = "\\home\\ubuntu\\poscoapp-firebase-adminsdk-nvbh5-c024db5217.json";
 	
     private static final String PROJECT_ID = "poscoapp";
     private static final String BASE_URL = "https://fcm.googleapis.com";

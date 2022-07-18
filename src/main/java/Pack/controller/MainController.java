@@ -101,6 +101,26 @@ public class MainController {
         return ResponseEntity.ok(res);
     }
 	
+	@GetMapping("/send/type/{type}/topic/{topic}")
+    public ResponseEntity<?> reqFcm(@PathVariable String type, @PathVariable String topic) {
+		String title = type + " 지시 등록";
+		String body = topic + "창고에 새로운 " + type + " 지시가 등록되었습니다.";
+        log.info("** title : {}",title);
+        log.info("** body : {}", body);
+
+        CommResponse res = new CommResponse();
+        try {
+            PushNotificationService.sendCommonMessage(title, body, topic);
+            res.setCdResult("200");
+        } catch(Exception e) {
+            log.error(e.getMessage());
+            res.setCdResult("500");
+            res.setMsgResult("처리중 에러 발생");
+            return new ResponseEntity<>(res, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return ResponseEntity.ok(res);
+    }
+	
     public ResponseEntity<?> sendFCM(String title, String body, String topic) {
         log.info("** title : {}",title);
         log.info("** body : {}",body);
